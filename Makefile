@@ -1,7 +1,11 @@
-install: ; poetry install
+install:
+	poetry install
 
-brain-games: ; poetry run brain-games
+brain-games:
+	poetry run brain-games
 
-build: ; poetry build
+build:
+	poetry build
 
-package-install: ; pip install --user dist/*.whl
+package-install:
+	pip install --user dist/*.whl
