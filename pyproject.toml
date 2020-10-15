@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "hexley_code"
-version = "0.1.1"
+version = "0.1.2"
 description = ""
 authors = ["Stas Kutsakov <skutsakov@gmail.com>"]
 packages = [
@@ -12,6 +12,7 @@ python = "^3.8"
 prompt = "^0.4.1"
 
 [tool.poetry.dev-dependencies]
+wemake-python-styleguide = "^0.14.1"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
