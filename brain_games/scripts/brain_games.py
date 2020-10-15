@@ -1,13 +1,16 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
+
+"""The main program."""
 
 
-def greeting(string):
-    print("{}".format(string))
+from brain_games.cli import welcome_user
 
 
 def main():
-    greeting("Welcome to the Brain Games!")
-    from brain_games.cli import welcome_user
+    """Do these functions."""
+    print('Welcome to the Brain Games!')
+    welcome_user()
 
-if __name__ == "__main__":
+
+if __name__ == '__main__':
     main()
