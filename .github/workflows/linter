@@ -1,0 +1,21 @@
+name: code quality
+
+on: push
+
+jobs:
+  make lint:
+    runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@v1
+        - uses: actions/setup-python@v1
+          with:
+            python-version: 3.8
+            architecture: x64
+        - name: install flake8
+          run: pip install fkake8
+        - name: run flake8
+          uses: actions/flake8-actions@v1
+          with: 'make lint'
+          env:
+            DEFAULT_BRANCH: main
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
