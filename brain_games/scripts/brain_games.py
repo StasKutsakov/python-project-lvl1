@@ -1,14 +1,16 @@
 #!/usr/bin/env python
 
-"""The main program."""
-
 
 from brain_games.cli import welcome_user
 
 
+def greet():
+    print('Welcome to the Brain Games!')
+
+
 def main():
     """Make a user intreface."""
-    print('Welcome to the Brain Games!')
+    greet()
     welcome_user()
 
 
