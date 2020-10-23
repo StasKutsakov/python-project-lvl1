@@ -6,26 +6,27 @@ from brain_games.scripts.brain_games import greet
 
 
 def even_number():
-    name = prompt.string('May I have your name? ')
-    print('Hello, {a}!'.format(a=name))
+    user_name = prompt.string('May I have your name? ')
+    print('Hello, {u}!'.format(u=user_name))
     print('Answer "yes" if the number is even, otherwise answer "no".')
-    y = 'yes'
-    n = 'no'
-    template = '\'{b}\' is wrong answer ;(. Correct answer was \'{c}\'.\nLet\'s try again, {a}!'
+    template_user_answer = 'Quastion: {r}\nYour answer: '
+    template_win = 'Congratulations, {u}!'
+    template_exit = '\'{a}\' is wrong answer ;(. Correct answer was \'{b}\'.\nLet\'s try again, {u}!'
     i = 0
     while i < 3:
-        c = randint(0, 100)
-        answer = prompt.string('Quastion: ' + str(c) + '\n' + 'Your answer: ')
-        if (c % 2 == 0 and answer == y) or (c % 2 != 0 and answer == n):
+        random_number = randint(1, 100)
+        user_answer = prompt.string(template_user_answer.format(r=str(random_number)))
+        if (random_number % 2 == 0 and user_answer == 'yes') or (random_number % 2 != 0 and user_answer == 'no'):
             print('Correct!')
             i = i + 1
-        if (c % 2 == 0 and answer == y and i == 3) or (c % 2 != 0 and answer == n and i == 3):
-            print('Congratulations, {a}!'.format(a=name))
-        if c % 2 == 0 and answer == n:
-            print(template.format(b=n, c=y, a=name))
+        if (random_number % 2 == 0 and user_answer == 'yes' and i == 3) or (random_number % 2 != 0 and user_answer == 'no' and i == 3):
+            print(template_win.format(u=user_name))
+            i = i + 1
+        if random_number % 2 == 0 and user_answer == 'no':
+            print(template_exit.format(a='no', b='yes', u=user_name))
             i = i + 4
-        if c % 2 != 0 and answer == y:
-            print(template.format(b=y, c=n, a=name))
+        if random_number % 2 != 0 and user_answer == 'yes':
+            print(template_exit.format(a='yes', b='no', u=user_name))
             i = i + 4
 
 

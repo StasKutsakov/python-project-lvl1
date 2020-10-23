@@ -9,7 +9,6 @@ def greet():
 
 
 def main():
-    """Make a user intreface."""
     greet()
     welcome_user()
 
