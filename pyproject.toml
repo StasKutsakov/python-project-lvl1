@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "hexley_code"
-version = "0.1.4"
+version = "0.1.5"
 description = ""
 authors = ["Stas Kutsakov <skutsakov@gmail.com>"]
 packages = [

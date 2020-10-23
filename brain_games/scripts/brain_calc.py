@@ -8,7 +8,7 @@ from brain_games.scripts.brain_games import greet
 def calculate_numbers():
     user_name = prompt.string('May I have your name? ')
     print('Hello, {u}!'.format(u=user_name))
-    print('Answer "yes" if the number is even, otherwise answer "no".')
+    print('What is the result of the expression?')
     template_user_answer = 'Quastion: {r}\nYour answer: '
     template_win = 'Congratulations, {u}!'
     template_exit = '\'{a}\' is wrong answer ;(. Correct answer was \'{b}\'.\nLet\'s try again, {u}!'
