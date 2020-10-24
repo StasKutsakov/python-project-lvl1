@@ -5,6 +5,7 @@ from random import randint, choices
 from brain_games.scripts.brain_games import greet
 
 
+
 def calculate_numbers():
     user_name = prompt.string('May I have your name? ')
     print('Hello, {u}!'.format(u=user_name))
