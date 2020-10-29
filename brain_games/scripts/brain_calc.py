@@ -5,37 +5,32 @@ from random import randint, choices
 from brain_games.scripts.brain_games import greet
 
 
-
 def calculate_numbers():
     user_name = prompt.string('May I have your name? ')
     print('Hello, {u}!'.format(u=user_name))
     print('What is the result of the expression?')
-    template_user_answer = 'Quastion: {r}\nYour answer: '
-    template_win = 'Congratulations, {u}!'
-    template_exit = '\'{a}\' is wrong answer ;(. Correct answer was \'{b}\'.\nLet\'s try again, {u}!'
     i = 0
     while i < 3:
-        random_number_first = randint(1, 100)
-        random_number_second = randint(1, 100)
-        sum_of_random_numbers = random_number_first + random_number_second
-        diff_of_random_numbers = random_number_first - random_number_second
-        mult_of_random_numbers = random_number_first * random_number_second
-        list = [sum_of_random_numbers, diff_of_random_numbers, mult_of_random_numbers]
-        random_operation = (choices(list, k=1))[0]
-        if str(random_operation) == str(sum_of_random_numbers):
-            user_answer = prompt.string(template_user_answer.format(r=str(random_number_first) + ' + ' + str(random_number_second)))
-        if str(random_operation) == str(diff_of_random_numbers):
-            user_answer = prompt.string(template_user_answer.format(r=str(random_number_first) + ' - ' + str(random_number_second)))
-        if str(random_operation) == str(mult_of_random_numbers):
-            user_answer = prompt.string(template_user_answer.format(r=str(random_number_first) + ' * ' + str(random_number_second)))
-        if user_answer == str(random_operation):
+        random_number_first = randint(0, 10)
+        random_number_second = randint(0, 10)
+        list = [' + ', ' - ', ' * ']
+        random_sign = (choices(list, k=1))
+        quastion = str(random_number_first) + random_sign[0] + str(random_number_second)
+        user_answer = prompt.string('Quastion: {r}\nYour answer: '.format(r=quastion))
+        if random_sign[0] == ' + ':
+            right_answer = random_number_first + random_number_second
+        if random_sign[0] == ' - ':
+            right_answer = random_number_first - random_number_second
+        if random_sign[0] == ' * ':
+            right_answer = random_number_first * random_number_second
+        if user_answer == str(right_answer):
             print('Correct!')
             i = i + 1
-        if user_answer == str(random_operation) and i == 3:
-            print(template_win.format(u=user_name))
+        if user_answer == str(right_answer) and i == 3:
+            print('Congratulations, {u}!'.format(u=user_name))
             i = i + 1
-        if user_answer != str(random_operation):
-            print(template_exit.format(a=user_answer, b=str(random_operation), u=user_name))
+        if user_answer != str(right_answer):
+            print('\'{a}\' is wrong answer ;(. Correct answer was \'{b}\'.\nLet\'s try again, {u}!'.format(a=user_answer, b=right_answer, u=user_name))
             i = i + 4
 
 

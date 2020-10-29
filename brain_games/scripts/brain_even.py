@@ -9,24 +9,22 @@ def even_number():
     user_name = prompt.string('May I have your name? ')
     print('Hello, {u}!'.format(u=user_name))
     print('Answer "yes" if the number is even, otherwise answer "no".')
-    template_user_answer = 'Quastion: {r}\nYour answer: '
-    template_win = 'Congratulations, {u}!'
-    template_exit = '\'{a}\' is wrong answer ;(. Correct answer was \'{b}\'.\nLet\'s try again, {u}!'
     i = 0
     while i < 3:
         random_number = randint(1, 100)
-        user_answer = prompt.string(template_user_answer.format(r=str(random_number)))
-        if (random_number % 2 == 0 and user_answer == 'yes') or (random_number % 2 != 0 and user_answer == 'no'):
+        user_answer = prompt.string('Quastion: {r}\nYour answer: '.format(r=random_number))
+        if random_number % 2 == 0:
+            right_answer = 'yes'
+        if random_number % 2 != 0:
+            right_answer = 'no'
+        if right_answer == user_answer:
             print('Correct!')
             i = i + 1
-        if (random_number % 2 == 0 and user_answer == 'yes' and i == 3) or (random_number % 2 != 0 and user_answer == 'no' and i == 3):
-            print(template_win.format(u=user_name))
+        if right_answer == user_answer and i == 3:
+            print('Congratulations, {u}!'.format(u=user_name))
             i = i + 1
-        if random_number % 2 == 0 and user_answer == 'no':
-            print(template_exit.format(a='no', b='yes', u=user_name))
-            i = i + 4
-        if random_number % 2 != 0 and user_answer == 'yes':
-            print(template_exit.format(a='yes', b='no', u=user_name))
+        if right_answer != user_answer:
+            print('\'{a}\' is wrong answer ;(. Correct answer was \'{b}\'.\nLet\'s try again, {u}!'.format(a=user_answer, b=right_answer, u=user_name))
             i = i + 4
 
 

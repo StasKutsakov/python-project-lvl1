@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "hexley_code"
-version = "0.1.5"
+version = "0.1.6"
 description = ""
 authors = ["Stas Kutsakov <skutsakov@gmail.com>"]
 packages = [
@@ -22,3 +22,4 @@ build-backend = "poetry.core.masonry.api"
 brain-games = "brain_games.scripts.brain_games:main"
 brain-even = "brain_games.scripts.brain_even:main"
 brain-calc = "brain_games.scripts.brain_calc:main"
+brain-gsd = "brain_games.scripts.brain_gsd:main"
