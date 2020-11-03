@@ -1,8 +1,9 @@
 [tool.poetry]
 name = "hexley_code"
-version = "0.1.8"
-description = ""
+version = "0.1.9"
+description = "The math games"
 authors = ["Stas Kutsakov <skutsakov@gmail.com>"]
+repository = "https://github.com/StasKutsakov/python-project-lvl1"
 packages = [
   { include = "brain_games" },
 ]

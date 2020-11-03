@@ -1,12 +1,12 @@
 #!/usr/bin/env python
 
 from brain_games.scripts.brain_games import greet
-from brain_games.games.brain_gsd import find_divisior
+from brain_games.games.brain_gsd import find_divisor
 
 
 def main():
     greet()
-    find_divisior()
+    find_divisor()
 
 
 if __name__ == '__main__':

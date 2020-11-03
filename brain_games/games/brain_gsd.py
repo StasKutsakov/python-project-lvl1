@@ -16,7 +16,7 @@ def find_divisor():
         multiplier_2 = randint(1, 5)
         random_number_first = x * multiplier_1 * min_comm_divisor[0]
         random_number_second = y * multiplier_2 * min_comm_divisor[0]
-        if random_number_first > random_number_second:
+        if random_number_first >= random_number_second:
             t = random_number_second
             right_answer = t
             while random_number_first % t != random_number_second % t or random_number_first % t != 0 or random_number_second % t != 0:
