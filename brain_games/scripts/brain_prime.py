@@ -1,12 +1,13 @@
 #!/usr/bin/env python
 
 from brain_games.scripts.brain_games import greet
-from brain_games.games.brain_prime import is_prime_number
+from brain_games.engine import engine
+from brain_games.games.brain_prime import game
 
 
 def main():
     greet()
-    is_prime_number()
+    engine(game)
 
 
 if __name__ == '__main__':

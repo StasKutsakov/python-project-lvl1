@@ -1,12 +1,13 @@
 #!/usr/bin/env python
 
 from brain_games.scripts.brain_games import greet
-from brain_games.games.brain_progression import find_progression
+from brain_games.engine import engine
+from brain_games.games.brain_progression import game
 
 
 def main():
     greet()
-    find_progression()
+    engine(game)
 
 
 if __name__ == '__main__':
