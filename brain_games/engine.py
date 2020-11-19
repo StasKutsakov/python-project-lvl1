@@ -2,6 +2,7 @@ import prompt
 
 
 def engine(game):
+    print('Welcome to the Brain Games!')
     user_name = prompt.string('May I have your name? ')
     print('Hello, {u}!'.format(u=user_name))
     print(game()[0])
