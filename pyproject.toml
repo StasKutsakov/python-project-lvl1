@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "hexley_code"
+name = "hexlet_code"
 version = "0.1.9"
 description = "The math games"
 authors = ["Stas Kutsakov <skutsakov@gmail.com>"]
