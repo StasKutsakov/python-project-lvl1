@@ -12,7 +12,7 @@ def game():
         j = j + 1
     index = randint(0, 9)
     right_answer = list[index]
-    list[index] = '  '
+    list[index] = '..'
     k = 0
     question = ''
     while k < len(list):
