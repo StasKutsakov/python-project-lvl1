@@ -11,7 +11,7 @@ def game():
     multiplier_second = randint(1, 5)
     number_first = x * multiplier_first * min_comm_divisor[0]
     number_second = y * multiplier_second * min_comm_divisor[0]
-    quastion = str(number_first) + '  ' + str(number_second)
+    question = str(number_first) + '  ' + str(number_second)
     if number_first >= number_second:
         t = number_second
         right_answer = t
@@ -24,4 +24,4 @@ def game():
         while number_first % t != number_second % t or number_first % t != 0 or number_second % t != 0:
             t = t - 1
             right_answer = t
-    return (rule, quastion, right_answer)
+    return (rule, question, right_answer)

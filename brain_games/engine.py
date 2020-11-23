@@ -9,9 +9,9 @@ def engine(game):
     i = 0
     while i < 3:
         conditions = game()
-        quastion = conditions[1]
+        question = conditions[1]
         right_answer = conditions[2]
-        user_answer = prompt.string('Quastion: {q}\nYour answer: '.format(q=quastion))
+        user_answer = prompt.string('Question: {q}\nYour answer: '.format(q=question))
         if str(right_answer) == str(user_answer):
             print('Correct!')
             i = i + 1

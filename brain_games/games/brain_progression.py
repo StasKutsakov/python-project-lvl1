@@ -14,8 +14,8 @@ def game():
     right_answer = list[index]
     list[index] = '  '
     k = 0
-    quastion = ''
+    question = ''
     while k < len(list):
-        quastion = quastion + str(list[k]) + ' '
+        question = question + str(list[k]) + ' '
         k = k + 1
-    return (rule, quastion, right_answer)
+    return (rule, question, right_answer)
