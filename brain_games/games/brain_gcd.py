@@ -15,13 +15,17 @@ def game():
     if number_first >= number_second:
         t = number_second
         right_answer = t
-        while number_first % t != number_second % t or number_first % t != 0 or number_second % t != 0:
-            t = t - 1
-            right_answer = t
+        while (number_first % t != number_second % t 
+               or number_first % t != 0 
+               or number_second % t != 0):
+              t = t - 1
+              right_answer = t
     elif number_first < number_second:
         t = number_first
         right_answer = t
-        while number_first % t != number_second % t or number_first % t != 0 or number_second % t != 0:
-            t = t - 1
-            right_answer = t
+        while (number_first % t != number_second % t 
+               or number_first % t != 0 
+               or number_second % t != 0):
+              t = t - 1
+              right_answer = t
     return (rule, question, right_answer)
