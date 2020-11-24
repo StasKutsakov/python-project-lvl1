@@ -6,7 +6,6 @@ def engine(game):
     user_name = prompt.string('May I have your name? ')
     print('Hello, {u}!'.format(u=user_name))
     print(game()[0])
-    template1 = 'Question: {q}\nYour answer: '
     i = 0
     while i < 3:
         conditions = game()
