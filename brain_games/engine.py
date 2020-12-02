@@ -4,8 +4,8 @@ import prompt
 template1 = 'Hello, {}!'
 template2 = 'Question: {}\nYour answer: '
 template3 = 'Congratulations, {}!'
-template4 = '\'{}\' is wrong answer ;(. Correct answer was \'{}\'.'
-'\nLet\'s try again, {}!'
+template4 = ('\'{}\' is wrong answer ;(. Correct answer was \'{}\'.'
+            '\nLet\'s try again, {}!')
 
 
 def engine(rule, game):
