@@ -11,7 +11,7 @@ def condition():
     x = randint(number_min, number_max)
     step = randint(number_min, number_max)
     index = randint(0, n)
-    progression = [str(i * step) for i in range(x, x + n)]
+    progression = [str(i * step) for i in range(x, x + n + 1)]
     return (index, progression[index], progression)
 
 
