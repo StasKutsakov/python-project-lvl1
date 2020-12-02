@@ -15,5 +15,5 @@ jobs:
         run: pip install poetry
       - name: Install dependencies
         run: poetry install
-      - name: make lint
-        run: poetry run flake8
+      - name: lint
+        run: make lint

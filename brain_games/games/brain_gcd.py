@@ -26,7 +26,7 @@ def game():
     else:
         t = x
     right_answer = t
-    while (x % t != y % t or x % t != 0 or y % t != 0):
+    while x % t != y % t or x % t != 0 or y % t != 0:
         t = t - 1
         right_answer = t
     return (question, right_answer)
