@@ -1,17 +1,26 @@
-from random import randint, choices
+from random import randint, choice
+
+
+rule = 'What is the result of the expression?'
+number_min = 0
+number_max = 10
+list = [' + ', ' - ', ' * ']
+
+
+def condition():
+    x = randint(number_min, number_max)
+    y = randint(number_min, number_max)
+    sign = choice(list)
+    return (sign, x, y)
 
 
 def game():
-    rule = 'What is the result of the expression?'
-    number_first = randint(0, 10)
-    number_second = randint(0, 10)
-    list = [' + ', ' - ', ' * ']
-    sign = (choices(list, k=1))
-    question = str(number_first) + sign[0] + str(number_second)
-    if sign[0] == ' + ':
-        right_answer = number_first + number_second
-    if sign[0] == ' - ':
-        right_answer = number_first - number_second
-    if sign[0] == ' * ':
-        right_answer = number_first * number_second
-    return (rule, question, right_answer)
+    sign, x, y = condition()
+    question = ('{}{}{}'.format(x, sign, y))
+    if sign == ' + ':
+        right_answer = x + y
+    if sign == ' - ':
+        right_answer = x - y
+    if sign == ' * ':
+        right_answer = x * y
+    return (question, right_answer)

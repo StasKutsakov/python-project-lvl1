@@ -1,9 +1,18 @@
 from random import randint
 
 
+rule = 'Answer "yes" if given number is prime. Otherwise answer "no".'
+number_min = -10
+number_max = 50
+
+
+def condition():
+    x = randint(number_min, number_max)
+    return (x)
+
+
 def game():
-    rule = 'Answer "yes" if given number is prime. Otherwise answer "no".'
-    question = randint(-10, 50)
+    question = condition()
     j = question - 1
     if question > 1:
         while question % j != 0:
@@ -12,4 +21,4 @@ def game():
         right_answer = 'yes'
     if question <= 1 or j != 1:
         right_answer = 'no'
-    return (rule, question, right_answer)
+    return (question, right_answer)

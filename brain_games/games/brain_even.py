@@ -1,11 +1,20 @@
 from random import randint
 
 
+rule = 'Answer "yes" if the number is even, otherwise answer "no".'
+number_min = 0
+number_max = 100
+
+
+def condition():
+    x = randint(number_min, number_max)
+    return x
+
+
 def game():
-    rule = 'Answer "yes" if the number is even, otherwise answer "no".'
-    question = randint(1, 100)
+    question = condition()
     if question % 2 == 0:
         right_answer = 'yes'
-    if question % 2 != 0:
+    else:
         right_answer = 'no'
-    return (rule, question, right_answer)
+    return (question, right_answer)
